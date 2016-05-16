@@ -72,7 +72,7 @@ font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="login.html" class="
                     <div class="col-md-12">
                      <h2>BERANDA ADMIN</h2>
                      </br>   
-                        <h5>Selamat Datang di Web Site Fans Page Persib Bandung! </h5>
+                        <h5>Selamat Datang di Web Site Fanspage Persib Bandung! </h5>
                     </div>
                 </div>              
                  <!-- /. ROW  -->
