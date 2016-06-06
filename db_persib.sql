@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 23, 2016 at 04:01 PM
+-- Generation Time: Jun 06, 2016 at 06:06 AM
 -- Server version: 5.5.27
 -- PHP Version: 5.4.7
 
@@ -23,6 +23,29 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `member`
+--
+
+CREATE TABLE IF NOT EXISTS `member` (
+  `member_id` int(5) NOT NULL AUTO_INCREMENT,
+  `member_nama` varchar(40) NOT NULL,
+  `member_password` varchar(30) NOT NULL,
+  `member_alamat` varchar(50) NOT NULL,
+  `member_telp` varchar(12) NOT NULL,
+  `member_tgl_masuk` varchar(30) NOT NULL,
+  PRIMARY KEY (`member_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `member`
+--
+
+INSERT INTO `member` (`member_id`, `member_nama`, `member_password`, `member_alamat`, `member_telp`, `member_tgl_masuk`) VALUES
+(1, 'sipelaut ', '', 'di laut', '12254', '2016-05-02');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `t_admin`
 --
 
@@ -34,7 +57,14 @@ CREATE TABLE IF NOT EXISTS `t_admin` (
   `admin_alamat` varchar(50) NOT NULL,
   `admin_telp` varchar(12) NOT NULL,
   PRIMARY KEY (`admin_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `t_admin`
+--
+
+INSERT INTO `t_admin` (`admin_id`, `admin_nama`, `admin_username`, `admin_password`, `admin_alamat`, `admin_telp`) VALUES
+(1, 'Administrator', 'admin', '21232f297a57a5a743894a0e4a801f', 'Sumedang', '081214736703');
 
 -- --------------------------------------------------------
 
@@ -45,8 +75,8 @@ CREATE TABLE IF NOT EXISTS `t_admin` (
 CREATE TABLE IF NOT EXISTS `t_berita` (
   `berita_id` int(5) NOT NULL AUTO_INCREMENT,
   `jadwal_id` int(5) NOT NULL,
-  `berita_judul` varchar(50) NOT NULL,
   `berita_deskripsi` varchar(100) NOT NULL,
+  `berita_judul` varchar(50) NOT NULL,
   PRIMARY KEY (`berita_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
@@ -64,29 +94,6 @@ CREATE TABLE IF NOT EXISTS `t_jadwal` (
   `lokasi_tanding` varchar(40) NOT NULL,
   PRIMARY KEY (`jadwal_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `t_member`
---
-
-CREATE TABLE IF NOT EXISTS `t_member` (
-  `member_id` int(5) NOT NULL AUTO_INCREMENT,
-  `member_nama` varchar(40) NOT NULL,
-  `member_password` varchar(30) NOT NULL,
-  `member_alamat` varchar(50) NOT NULL,
-  `member_telp` varchar(12) NOT NULL,
-  `member_tgl_masuk` date NOT NULL,
-  PRIMARY KEY (`member_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `t_member`
---
-
-INSERT INTO `t_member` (`member_id`, `member_nama`, `member_password`, `member_alamat`, `member_telp`, `member_tgl_masuk`) VALUES
-(1, 'Eva', '', 'Sumedang', '081214743670', '2016-05-03');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
