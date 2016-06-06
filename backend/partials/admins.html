@@ -1,0 +1,35 @@
+ <div class="row">
+    <div class="col-md-12" ng-show="admins.length > 0">
+    
+    <nav class= "navbar navbar-default" role= "navigation" >
+    <div class= "navbar-header" >
+    <a class="btn btn-lg btn-success" href="#/edit-admin/0"><i class="glyphicon glyphicon-plus"></i>&nbsp;Add new Admin</a>
+    </div>
+    </nav>
+        <table class="table table-striped table-bordered">
+        <thead>
+        <th>Nama Admin&nbsp;</th>
+        <th>Username&nbsp;</th>
+        <th>Password&nbsp;</th>
+        <th>Alamat&nbsp;</th>
+        <th>No Telepo&nbsp;</th>
+        <th>Action&nbsp;</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="data in admins">
+                <td>{{data.admin_nama}}</td>
+                <td>{{data.admin_username}}</td>
+                <td>{{data.admin_password}}</td>
+                <td>{{data.admin_alamat}}</td>
+                <td>{{data.admin_telp}}</td>
+                <td><a href="#/edit-admin/{{data.admin_id}}" class="btn">&nbsp;<i class="glyphicon glyphicon-edit"></i>&nbsp; Edit Admin</a></td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="col-md-12" ng-show="admins.length == 0">
+        <div class="col-md-12">
+            <h4>No admins found</h4>
+        </div>
+    </div>
+</div>
