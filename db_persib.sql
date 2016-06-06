@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `t_admin` (
   `admin_id` int(5) NOT NULL AUTO_INCREMENT,
   `admin_nama` varchar(40) NOT NULL,
+  `admin_username` varchar(30) NOT NULL,
   `admin_password` varchar(30) NOT NULL,
   `admin_alamat` varchar(50) NOT NULL,
   `admin_telp` varchar(12) NOT NULL,
@@ -44,6 +45,7 @@ CREATE TABLE IF NOT EXISTS `t_admin` (
 CREATE TABLE IF NOT EXISTS `t_berita` (
   `berita_id` int(5) NOT NULL AUTO_INCREMENT,
   `jadwal_id` int(5) NOT NULL,
+  `berita_judul` varchar(50) NOT NULL,
   `berita_deskripsi` varchar(100) NOT NULL,
   PRIMARY KEY (`berita_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
